@@ -1,0 +1,44 @@
+{% extends 'routes/base.html' %}
+
+{% block title %}Web MNIST - Home{% endblock %}
+
+{% block page_header %}
+<h1>Nguyễn Duy Khoa -18520924 </h1>
+{% endblock page_header %}
+
+{% block page_content %}
+    <div class="row">
+        <h4 class="text-center">Sử dụng SVM model trong Nhận diện chữ viết tay</h4>
+        <div class="col-sm-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center"><b>Vẽ chữ số </b></h3>
+                </div>
+                <div class="panel-body text-center">
+                    <canvas id="canvas" width="280" height="280" style="border:1px solid #31708f;"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center"><b>Dự đoán</b></h3>
+                </div>
+                <div class="panel-body text-center">
+                    <canvas id="predictionCanvas" width="280" height="280" style="border:1px solid #31708f;"></canvas>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div>
+        <button id="evalButton" class="btn btn-lg btn-block btn-info">Dự đoán</button>
+        <button id="clearButton" class="btn btn-lg btn-block btn-default">Xóa</button>
+    </div>
+{% endblock page_content %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='jquery-3.5.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='canvas_handler.js') }}"></script>
+    <script src="{{ url_for('static', filename='eval_handler.js') }}"></script>
+{% endblock scripts %}

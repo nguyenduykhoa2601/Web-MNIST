@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            {% block page_header %}{% endblock page_header %}
+        </div>
+        {% block page_content %}{% endblock page_content %}
+    </div>
+{% endblock content %}
+
+{% block scripts %}{% endblock scripts %}

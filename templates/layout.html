@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% endblock head %}
+
+{% block navbar %}
+    <nav class="navbar navbar-default" role="navigation" style="background-image: linear-gradient(to bottom,#d9edf7 0,#b9def0 100%)">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" , style="color: #31708f">Nhận diện chữ số viết tay</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/" , style="color: #9999FF">Trang chủ</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100019330931407", target="_blank" rel="noopener noreferrer" style="color: #31708f">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock navbar %}
